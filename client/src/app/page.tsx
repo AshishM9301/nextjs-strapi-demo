@@ -2,12 +2,14 @@ import { getHomePageData } from "@/data/loader";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { HeroSection } from "@/components/blocks/HeroSections";
+import { InfoBlock } from "@/components/blocks/InfoBlocks";
+import { BlockRenderer } from "@/components/BlockRenderer";
 
 
 const loader = async () => {
   const data = await getHomePageData();
   if (!data) notFound();
-  console.log(data);
+
   return { ...data };
 }
 
@@ -19,15 +21,7 @@ export default async function Home() {
   return (
     <div>
 
-      <HeroSection
-        id={blocks[0].id}
-        theme={blocks[0].theme}
-        heading={blocks[0].heading}
-        cta={blocks[0].cta}
-        image={blocks[0].image}
-        logo={blocks[0].logo}
-      />
-
+      <BlockRenderer blocks={blocks} />
     </div>
   );
 }
