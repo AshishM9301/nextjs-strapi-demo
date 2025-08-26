@@ -1,5 +1,5 @@
 .header {
-  
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,10 +12,14 @@
     background-color: $orange;
   }
 
+  &--black {
+    color: #000;
+  }
+
 
   &--white {
     filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(25deg) brightness(102%) contrast(101%);
-    
+
   }
 
   img {

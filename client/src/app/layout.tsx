@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "../sass/main.scss";
 import { Header } from "@/components/layout/Header";
 import { getGlobalSettings } from "@/data/loader";
+import { Footer } from "@/components/layout/Footer";
 
 // import "./globals.css";
 
@@ -25,7 +26,7 @@ async function loader() {
   const { data } = await getGlobalSettings();
 
   if (!data) throw new Error("No data found");
-  return { header: data.header };
+  return { header: data.header, footer: data.footer };
 }
 
 export default async function RootLayout({
@@ -33,7 +34,7 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { header } = await loader();
+  const { header, footer } = await loader();
   return (
     <html lang="en">
       <body
@@ -41,6 +42,7 @@ export default async function RootLayout({
       >
         <Header data={header} />
         {children}
+        <Footer data={footer} />
       </body>
     </html>
   );

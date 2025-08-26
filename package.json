@@ -1,0 +1,20 @@
+{
+  "name": "nextjs-strapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "cd server && npm run develop",
+    "client": "cd client && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AshishM9301/nextjs-strapi-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AshishM9301/nextjs-strapi-demo/issues"
+  },
+  "homepage": "https://github.com/AshishM9301/nextjs-strapi-demo#readme"
+}

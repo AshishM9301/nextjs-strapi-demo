@@ -18,11 +18,13 @@ export function Header({ data }: HeaderProps) {
     const pathname = usePathname();
     const headerLight = pathname === "/experience";
 
+    console.log("headerLight", headerLight)
+
     if (!data) return null;
 
     const { logo, navigation, cta } = data;
     return (
-        <header className={`header ${headerLight ? "header--light" : ""}`}>
+        <header className={`header ${headerLight ? "header--light" : "header--black"}`}>
             <Link href="/">
                 <StrapiImage
                     src={logo.image.url}

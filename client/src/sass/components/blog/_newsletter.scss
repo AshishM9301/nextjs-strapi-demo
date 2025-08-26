@@ -26,6 +26,8 @@
     height: 6.4rem;
     border-radius: 1.8rem 0px 0px 1.8rem;
     padding-left: 2.1rem;
+    border: none;
+    outline: none;
   }
 
   &__subscribe {
@@ -42,7 +44,7 @@
   &__email--error {
     border: 1px solid red;
     outline: 1px solid red;
-    
+
     &::placeholder {
       color: red;
     }
